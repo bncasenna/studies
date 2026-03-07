@@ -5,23 +5,27 @@
     <div class="progress-bar">
         <div class="progress" style=></div>
     </div>
-    <div class="progress-count">0/0</div>
+    <div class="progress-count">{{completed}}/{{total_tasks}}</div>
 </div>
 
-<form class="task-form" method="POST">
+<form class="task-form" method="POST" ACTION={% url 'add' %}>
+    {% csrf_token %}
     <input name="label" type="text" placeholder="$ adicionar nova tarefa..." required autofocus />
     <button type="submit">ADD</button>
 </form>
-
+{% if tasks %}
 <ul class="task-list">
+    {% for task in tasks %}
     <li class="completed">
         <form method="POST">
-            <input type="checkbox" onChange="this.form.submit()" checked />
+            {% csrf_token %}
+            <input type="checkbox" onChange="this.form.submit()" {% if  task.done %}checked{% endif %} />
         </form>
-        <span>Assistir 30 minutos de aulas</span>
+        <span>{{ task.label }}</span>
         <a href="" class="delete">×</a>
     </li>
-    
+    {% endfor %}
+{%endif%}
 </ul>
 <p class="footer">faltam 4 tarefas • Bora codar!</p>
 {% endblock %}
