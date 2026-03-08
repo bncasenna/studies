@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 from PyPDF2 import PdfReader
 
-caminhoPdf = r#caminho
+caminhoPdf = r"C:\Users\Cauan\Documents\python\docs\HP e a pedra filosofal.pdf"
 leitor = PdfReader(caminhoPdf)
 
 texto = ""
