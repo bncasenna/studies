@@ -2,7 +2,7 @@
 
 This repository documents my journey learning programming.
 
-Here I share simple exercises, practice codes, and small projects created during my studies as a beginner developer. The goal of this repository is to register my progress, practice new concepts, and gradually improve my programming skills.
+Here I share simple exercises, practice codes, and small projects created during my studies as a beginner developer. The goal of this repository is to register my progress, and gradually improve my programming skills.
 
 ## What you will find here
 
